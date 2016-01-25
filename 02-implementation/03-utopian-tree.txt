@@ -1,0 +1,13 @@
+function main() {
+    var t = parseInt(readLine());
+    for(var a0 = 0; a0 < t; a0++){
+        var n = parseInt(readLine());
+        height = 1;
+        for (i=0; i<n; i++){
+            if (i%2==0) height = height*2;
+            else height = height +1;
+        }
+        console.log(height);
+    }
+
+}

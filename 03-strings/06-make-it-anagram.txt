@@ -1,0 +1,16 @@
+function processData(input) {
+    input = input.split('\n');
+    var line1 = input[0];
+    var line2 = input[1];
+    var coincidencias = 0;
+    for (i=0; i<line1.length; i++){
+        for (j=0; j<line2.length; j++){
+            if(line1.charAt(i) == line2.charAt(j)){
+                coincidencias++;
+                line2 = line2.substr(0, j) + line2.substr(j+1, line2.length-j);
+                break;
+            }
+        }
+    }
+    console.log(line1.length+line2.length-coincidencias);
+} 

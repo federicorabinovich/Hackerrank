@@ -1,0 +1,11 @@
+<?php
+$_fp = fopen("php://stdin", "r");
+/* Enter your code here. Read input from STDIN. Print output to STDOUT */
+$total_reg =  fgets ($_fp);
+$total_sum = 0;
+$nums = explode(" ", fgets ($_fp));
+for ($i=0; $i< count($nums); $i++){
+    $total_sum+=intval(trim($nums[$i]));
+}
+echo $total_sum;
+?>

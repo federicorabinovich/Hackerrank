@@ -1,0 +1,8 @@
+function main() {
+    var time = readLine();
+    bolAm = time.substr(8,2)=='AM';
+    hour = time.substr(0,2);
+    if(hour=='12' && bolAm) hour='00';
+    if(!bolAm && parseInt(hour)!=12) hour = String(parseInt(hour)+12);
+    console.log(hour+time.substr(2,6));
+}

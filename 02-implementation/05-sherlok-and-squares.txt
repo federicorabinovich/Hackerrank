@@ -1,0 +1,11 @@
+function processData(input) {
+    input = input.split('\n');
+    t = input[0];
+    for (i=1; i<=t; i++){
+        line = input[i].split(' ');
+        n1 = Math.ceil(Math.sqrt(line[0]));
+        n2 = Math.floor(Math.sqrt(line[1]));
+        res = Math.max(n2-n1+1, 0);
+        console.log(res);
+    }
+} 

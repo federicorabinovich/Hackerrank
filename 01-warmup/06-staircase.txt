@@ -1,0 +1,12 @@
+function main() {
+    var n = parseInt(readLine());
+    var out="";
+    for (var i=1; i<=n; i++){
+        for(var j=1; j<=n ; j++){
+            if(j<=(n-i)) out+=" ";
+            else out += "#";
+        }
+        out += "\n";
+    }
+    console.log(out);
+}

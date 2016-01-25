@@ -1,0 +1,12 @@
+function processData(input) {
+    input = input.split('\n');
+    var n = input[0];
+    for (i=1; i<=n; i++){
+        borrados = 0;
+        linea = input[i];
+        for (j=1; j<linea.length; j++){
+            if(linea.charAt(j)==linea.charAt(j-1)) borrados++;
+        }     
+        console.log(borrados);
+    }
+} 

@@ -1,0 +1,20 @@
+function processData(input) {
+    input = input.split("\n");
+    var n = input[0];
+    var line = "";
+    var funny;
+    for (var i=1; i<=n; i++){
+        line = input[i];
+        funny = true;
+        for (j=0; j<(line.length-1); j++){
+            left = Math.abs(line.charCodeAt(j+1)-line.charCodeAt(j));
+            right = Math.abs(line.charCodeAt(line.length-1-j)-line.charCodeAt(line.length-2-j));
+            if (left != right){
+                funny = false;
+                break;
+            }
+        }
+        if(funny) console.log('Funny');
+        else console.log('Not Funny');
+    }
+} 

@@ -1,0 +1,18 @@
+function processData(input) {
+    //Enter your code here
+    var letters = input.split("");
+    var showup = [];
+    var pan = true;
+    for (var i=0; i<input.length; i++){
+        showup[input[i].toLowerCase().charCodeAt(0)] = true;
+    }
+    for (var j = 97; j<=122; j++){
+        if(!showup[j]){
+            pan = false;
+            break;
+        }
+    }
+    if(pan) console.log('pangram');
+    else console.log('not pangram');
+    
+} 
